@@ -1,0 +1,22 @@
+<div id="results">
+  <table class="table table-bordered table-hover col-9">
+    <thead>
+      <tr>
+        <th scope="col">Ticker</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @stocks.each do |stock| %>
+        <tr>
+          <th scope="row"><%= stock.ticker %></th>
+          <td><%= stock.name %></td>
+          <td><%= stock.last_price %></td>
+          <td><%= 'Some action' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
