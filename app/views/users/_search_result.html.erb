@@ -11,7 +11,7 @@
             <td><strong>Name:</strong> <%= "#{user.first_name} #{user.last_name}" %></td>
             <td><strong>Email:</strong> <%= user.email %></td>
             <td>
-              <%= link_to "View Profile", '#', class: "btn btn-sm btn-success" %>
+              <%= link_to "View Profile", user_path(user), class: "btn btn-sm btn-success" %>
               <% if current_user.not_friends_with?(user.id) %>
                 <%= link_to 'Follow user', friendships_path(friend: user), class: "btn btn-sm btn-success", method: :post %>
               <% else %>
